@@ -14,7 +14,9 @@ Those are 2 python scripts doing just that. A Sender and a Receiver that both un
 
 ## Usage
 Running a ``./Sender.py -d sample_files/ "$(cat /etc/passwd | head)"`` would start transmiting the first 10 lines of your ``/etc/passwd`` file through the privilege bits of all files in ``sample_files/``.
+
 Setting the receiver with a ``./Receiver.py -d sample_files/`` will start gathering the ``/etc/passwd`` characters from the privilege bits of all files in `sample_files/` and print them on screen (`Receiver.py` has clean output and can be piped as well).
+
 You can run a `watch -n1 "ls -l sample_files/"` and see the RWX Triplets dancing!
 
 ## `--help` would help
