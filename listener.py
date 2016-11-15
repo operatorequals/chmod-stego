@@ -37,7 +37,7 @@ while not Delivered :
 
 	cur_state = tick(files[0])				# Saves the current Tick Bit
 	while cur_state == last_state :			# If the current and previous Tick bits are same
-		sleep (0.2)							# Wait a while
+		sleep (0.1)							# Wait a while
 		cur_state = tick(files[0])			# Get new Tick bit in case it changed
 											# Spin-Lock until Tick bit Changes
 

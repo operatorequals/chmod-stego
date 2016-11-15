@@ -2,8 +2,6 @@
 import os, sys
 import argparse
 from time import sleep
-import signal
-
 
 parser = argparse.ArgumentParser()
 group = parser.add_mutually_exclusive_group( required = True )
@@ -11,7 +9,7 @@ group.add_argument( '--directory', '-d', help = 'Use all files in this directory
 group.add_argument( '--files', '-f', help = 'Use the listed files as in the * they are given', nargs = '*')
 
 parser.add_argument( '--delay', default = 0.5, type = float, help = "Set the delay between the chmod's")
-parser.add_argument( 'message', help = 'Message to be transmitted. Can be the output of a shell command if you use backticks (`) or $() expression in quotes ("")' )
+parser.add_argument( 'message', help = 'Message to be transmitted. Can be the output of a shell command if you use backticks (`) or $() expression in double-quotes ("").\r\nExample: %s -d sample_files/ "$(cat /etc/passwd | head)"' % sys.argv[0])
 args = parser.parse_args()
 
 
@@ -36,8 +34,6 @@ def revert_chmod() :
 	for f, st in zip(files, initial_status) :
 		os.chmod(f, st['mod'])
 		os.utime(f, (st['a_time'],  st['m_time']) )
-
-signal.signal(signal.SIGSEGV, revert_chmod)
 
 
 
