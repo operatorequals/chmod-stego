@@ -9,8 +9,8 @@ ENDLINE = '\x92'
 
 parser = argparse.ArgumentParser()
 group = parser.add_mutually_exclusive_group( required = True )
-group.add_argument( '--directory', '-d', help = 'Use all files in this directory in the * "ls" returns them (BEWARE: MUST BE WRITABLE)')
-group.add_argument( '--files', '-f', help = 'Use the listed files as in the * they are given', nargs = '*')
+group.add_argument( '--directory', '-d', help = 'Use all files in this directory in the order "ls" returns them (BEWARE: MUST BE WRITABLE)')
+group.add_argument( '--files', '-f', help = 'Use the listed files as in the order they are given', nargs = '*')
 
 args = parser.parse_args()
 # print args

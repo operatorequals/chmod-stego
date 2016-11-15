@@ -5,8 +5,8 @@ from time import sleep
 
 parser = argparse.ArgumentParser()
 group = parser.add_mutually_exclusive_group( required = True )
-group.add_argument( '--directory', '-d', help = 'Use all files in this directory in the * "ls" returns them (BEWARE: MUST BE WRITABLE)')
-group.add_argument( '--files', '-f', help = 'Use the listed files as in the * they are given', nargs = '*')
+group.add_argument( '--directory', '-d', help = 'Use all files in this directory in the order "ls" returns them (BEWARE: MUST BE WRITABLE)')
+group.add_argument( '--files', '-f', help = 'Use the listed files as in the order they are given', nargs = '*')
 
 parser.add_argument( '--delay', default = 0.5, type = float, help = "Set the delay between the chmod's")
 parser.add_argument( 'message', help = 'Message to be transmitted. Can be the output of a shell command if you use backticks (`) or $() expression in double-quotes ("").\r\nExample: %s -d sample_files/ "$(cat /etc/passwd | head)"' % sys.argv[0])
