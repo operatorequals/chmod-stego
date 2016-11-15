@@ -13,7 +13,7 @@ This guy (https://en.wikipedia.org/wiki/Andrew_S._Tanenbaum _) had a weird idea 
 Those are 2 python scripts doing just that. A Sender and a Receiver that both understand a minimal protocol of 1-way data transfer using only chmod's on files selected by the user. There is also an auto-synchronization mechanism of the Receiver using ticking!
 
 
-## --help would help
+## `--help` would help
 ```
 usage: Sender.py [-h] (--directory DIRECTORY | --files [FILES [FILES ...]])
                  [--delay DELAY]
@@ -35,7 +35,7 @@ optional arguments:
   --delay DELAY         Set the delay between the chmod's
 ```
 
-Receiver.py's --help is equivalent, but without the MESSAGE and --delay options. 
+`Receiver.py`'s `--help` is equivalent, but without the `MESSAGE` and `--delay` options. 
 
 ## So what?
 I can't think of any use cases out CTFs! Those scripts are intended to be a geeky Bday present. If you find any real use on them _please_ let me now!
