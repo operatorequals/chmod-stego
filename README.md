@@ -35,7 +35,7 @@ optional arguments:
   --delay DELAY         Set the delay between the chmod's
 ```
 
-
+Receiver.py's --help is equivalent, but without the MESSAGE and --delay options. 
 
 ## So what?
 I can't think of any use cases out CTFs! Those scripts are intended to be a geeky Bday present. If you find any real use on them _please_ let me now!
