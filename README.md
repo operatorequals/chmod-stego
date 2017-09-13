@@ -19,6 +19,8 @@ Setting the receiver with a ``./Receiver.py -d sample_files/`` will start gather
 
 You can run a `watch -n1 "ls -l sample_files/"` and see the RWX Triplets dancing!
 
+![Triplets Dancing in ASCII rhythm](https://github.com/operatorequals/chmod-stego/raw/master/example.gif "Triplets Dancing in ASCII rhythm")
+
 ## `--help` would help
 ```
 usage: Sender.py [-h] (--directory DIRECTORY | --files [FILES [FILES ...]])
@@ -44,4 +46,4 @@ optional arguments:
 `Receiver.py`'s `--help` is equivalent, but without the `MESSAGE` and `--delay` options. 
 
 ## So what?
-I can't think of any use cases out CTFs! Those scripts are intended to be a geeky Bday present. If you find any real use on them _please_ let me now!
+I can't think of any use cases except in CTFs! Those scripts are intended to be a geeky Bday present. If you find any real usage for them _please_ let me now!
